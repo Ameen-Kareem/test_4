@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:test_4/view/home_screen/home_screen.dart';
@@ -161,8 +159,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
                         username = await prefs.getString('user');
                         password = await prefs.getString('password');
-                        print(username);
-                        print(password);
+
+                        //Checks if registered details if it exists matches the entered details
+
                         if (username == nameController.text &&
                             password == passController.text) {
                           Navigator.pushReplacement(

@@ -39,6 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
               final SharedPreferences prefs =
                   await SharedPreferences.getInstance();
 
+              //Sets a bool value to false to know you logged out
+
               await prefs.setBool('isLoggedIn', false);
               Navigator.pushReplacement(
                   context,
@@ -65,6 +67,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
 logincondition(BuildContext context) async {
   final SharedPreferences prefs = await SharedPreferences.getInstance();
-
+  //sets a bool value to know you have logged in
   await prefs.setBool('isLoggedIn', true);
 }

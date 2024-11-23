@@ -202,6 +202,8 @@ class RegisterScreenState extends State<RegisterScreen> {
                         final SharedPreferences prefs =
                             await SharedPreferences.getInstance();
 
+                        //registers details upon validation
+
                         await prefs.setString('user', '${nameController.text}');
                         await prefs.setString(
                             'password', '${passController.text}');

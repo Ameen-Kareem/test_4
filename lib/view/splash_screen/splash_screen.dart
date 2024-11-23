@@ -45,11 +45,11 @@ validate(BuildContext context) async {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => ((name == null && pass == null) ||
-                    (name == '' && pass == '') ||
-                    isLoggedIn == false)
-                ? LoginScreen()
-                : HomeScreen(),
+            //Checks if the registered details exists if so makes sure the user is logged in
+            builder: (context) =>
+                ((name == null && pass == null) || isLoggedIn == false)
+                    ? LoginScreen()
+                    : HomeScreen(),
           ));
     },
   );
